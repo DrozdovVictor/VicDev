@@ -1,0 +1,77 @@
+// Colors
+$main-bg-dark-blue: #223442;
+$additional-bg-dark-blue: #2b486a;
+$main-button-bg-orange: #df5829;
+$additional-text-dark-blue: #0788e2;
+$additional-text-blue: #5bb5da;
+$main-hover-link-color: #05bc7a;
+$main-selection-bg-color: #3c319b;
+
+// Gradients
+$yellow-gradient: linear-gradient(#f9dc5a, #f7b255 35%, #e47644);
+$purple-gradient: linear-gradient(#b15bab, #6a5ead 55%, #253582);
+$blue-gradient: linear-gradient(#86c0b7, #6da8c9 40%, #2362b6);
+$red-gradient: linear-gradient(#ea7398, #eb1f1b 70%);
+
+// Screen resolutions
+$twoK: 2559px;
+$desktop: 1919px;
+$laptop: 1439px;
+$tablet: 1023px;
+$mobile: 767px;
+$smallMobile: 424px;
+
+@mixin twoK {
+  @media (max-width: $twoK) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin smallMobile {
+  @media (max-width: $smallMobile) {
+    @content;
+  }
+}
+
+// Displays
+
+@mixin flex-pattern($cg: auto, $rg: auto) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: $cg;
+  row-gap: $rg;
+  @content;
+}
+
+// Hover
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}

@@ -1,0 +1,31 @@
+@use '../../mixins.scss' as *;
+
+.link {
+  transition: color 0.3s;
+}
+
+.link:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: $main-hover-link-color;
+
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+
+@include hover {
+  .link:hover {
+    position: relative;
+    color: $main-hover-link-color;
+  }
+
+  .link:hover:before {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,21 @@
+@use '../../mixins.scss' as *;
+.button {
+  padding: 20px 90px;
+  border: 0px;
+  border-radius: 35px;
+  background-color: $main-button-bg-orange;
+
+  font-size: 48px;
+
+  transition: filter 0.3s;
+}
+
+@include hover {
+  .button:hover {
+    filter: brightness(90%);
+  }
+}
+
+.button:active {
+  filter: brightness(80%);
+}

@@ -1,0 +1,82 @@
+@use '../../mixins.scss' as *;
+
+.footer {
+  position: relative;
+  background-color: $additional-bg-dark-blue;
+  &__content {
+    padding: 45px 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 35px;
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__logo {
+    font-size: 40px;
+  }
+
+  &__text {
+    font-size: 24px;
+  }
+
+  &__social-item {
+    padding-top: 5px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+  }
+
+  &__social-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  &__social-text {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+@include mobile {
+  .footer {
+    &__logo {
+      font-size: 26px;
+    }
+
+    &__text,
+    &__social-text {
+      font-size: 20px;
+    }
+
+    &__social-icon {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '../../mixins.scss' as *;
+
+.number {
+  max-width: 675px;
+  position: absolute;
+  top: 0;
+  left: calc((100% - 675px) / 2);
+
+  font-family: 'Roboto', 'TiltNeon', sans-serif;
+  font-size: 600px;
+  opacity: 5%;
+  z-index: -1;
+
+  @include twoK {
+    font-size: 550px;
+  }
+
+  @include laptop {
+    font-size: 450px;
+  }
+
+  @include tablet {
+    font-size: 350px;
+  }
+
+  @include mobile {
+    font-size: 200px;
+  }
+}
